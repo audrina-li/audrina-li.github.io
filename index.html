@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrina Li</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-container{
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .name{
+            margin-right: 31.5vw;
+            font-size: 7vw;
+            color: white;
+        }
+
+        .inner{
+            max-width: 1440px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .row{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .col{
+            flex: 50%;
+            max-width: 50%;
+            box-sizing: border-box;
+        }
+
+        .title{
+            font-size: 65px;
+            color: rgb(100, 160, 200);
+        }
+        
+        .about-left{
+            width: 65%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .description{
+            margin-top: 5vh;
+            font-size: 16.5px;
+            text-align: justify;
+            line-height: 5vh;
+        }
+
+        .girl{
+            width: 375px;
+            height: 425px;
+        }
+
+        .skills{
+            width: 40%;
+        }
+
+        li{
+            list-style: none;
+            font-size: 18px;
+            margin: 55px 0;
+            position: relative;
+        }
+
+        li::before,
+        li::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(50, 80, 110);
+            position: absolute;
+            bottom: -28px;
+            border-radius: 15px;
+        }
+
+        li::before{
+            box-shadow: 0 0 5px rgba(65, 70, 77, 0.8);
+        }
+
+        li::after{
+            background-image: linear-gradient(90deg, rgb(92, 148, 207), rgb(157, 247, 250));
+        }
+
+        li::after{
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        .java::after{
+            animation-name: java;
+        }
+
+        .python::after{
+            animation-name: python;
+        }
+
+        .sql::after{
+            animation-name: sql;
+        }
+
+        .html::after{
+            animation-name: html;
+        }
+
+        .css::after{
+            animation-name: css;
+        }
+
+        @keyframes java{
+            from {
+                width: 0%;
+            }
+            to {
+                width: 85%;
+            }
+        }
+
+        @keyframes python{
+            from {
+                width: 0%;
+            }
+            to {
+                width: 80%;
+            }
+        }
+
+        @keyframes sql{
+            from {
+                width: 0%;
+            }
+            to {
+                width: 75%;
+            }
+        }
+
+        @keyframes html{
+            from {
+                width: 0%;
+            }
+            to {
+                width: 78%;
+            }
+        }
+
+        @keyframes css{
+            from {
+                width: 0%;
+            }
+            to {
+                width: 70%;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            .col{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <!-- Page 1 -->
+            <div class="swiper-slide">
+                <div class="background"> <img src="./background.jpg" alt="This photo couldn't be displayed.">
+                    <div class="name">Audrina Li</div>
+                </div>
+            </div>
+
+            <hr class="m-0">
+
+            <!-- Page 2 -->
+            <div class="swiper-slide">
+                <div class="inner">
+
+                    <div class="row">
+                        <!-- Text -->
+                        <div class="col">
+                            <div class="about-left">
+                                <div class="title">About Me</div>
+                                <p class="description">I am currently studying Computer Science at the University of British Columbia.
+                                    Through my coursework, I have come to realize that I have a strong interest in front-end development.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Illustration -->
+                        <div class="col">
+                            <div class="about-right">
+                                <img class="girl" src="./girl.png" alt="This photo couldn't be displayed.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="m-0">
+
+            <!-- Page 3 -->
+            <div class="swiper-slide">
+                <div class="skills">
+                    <div class="title">Skills</div>
+                    <ul>
+                        <li class="java">Java</li>
+                        <li class="python">Python</li>
+                        <li class="sql">SQL</li>
+                        <li class="html">HTML</li>
+                        <li class="css">CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper-scrollbar"></div>
+        
+    <!-- Swiper -->
+    <script>        
+        var Swiper = new Swiper ('.swiper-container', {
+            direction: 'vertical',
+            mousewheel: true,
+            freeMode: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+                draggable: true,
+            },
+        })
+    </script>
+</body>
+</html>
